@@ -58,7 +58,7 @@ def convert_fig_to_html(fig):
     import io, base64
 
     buf = io.BytesIO()
-    fig.savefig(buf, format='png')
+    fig.savefig(buf, format='png', bbox_inches='tight'))
     buf.seek(0)
     data = base64.b64encode(buf.read())
 
